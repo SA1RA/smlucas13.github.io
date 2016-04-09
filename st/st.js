@@ -7,9 +7,9 @@ st.Play = function () {};
 st.Play.prototype = {
 
 init: function () {
-//boot
-console.log("%c~~~ Booting the st ~~~\n Compliments of Alucard and others",
-"color:#fdf6e3; background:#07364");
+  //boot
+  console.log("%c~~~ Booting the st ~~~\n Compliments of Alucard and others",
+  "color:#fdf6e3; background:#07364");
 },
 
 preload: function () {
