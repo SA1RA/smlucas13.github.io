@@ -98,3 +98,8 @@ if (this.cursors.right.isDown) {
 }
 }
 }
+
+-------------------------------------
+var game = new Phaser.Game(320,568);
+game.state.add('play', st.play);
+game.state.start('play');
