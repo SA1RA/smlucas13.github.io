@@ -83,9 +83,9 @@ update: function () {
   }
 
   //tracking
-  //if (this.obj.x < this.player.x) {
-  //  this.obj.x += 5;
-  //}
+  if (this.obj.x < this.player.x) {
+    this.obj.x += 5;
+  }
   //if (this.obj.x > this.player.x) {
   //  this.obj.x -= 5;  
   }
