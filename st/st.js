@@ -22,9 +22,9 @@ preload: function () {
   this.load.audio('jn', 'assets/audio/jn.mp3');
 
   //sprites
-  this.load.image('background','assets/sprites/os.png');
-  this.load.spritesheet('obj','assets/sprites/bb.png',31,64,4);
-  this.load.spritesheet('player','assets/sprites/ac.png',96,64,23);
+  this.load.image('background','assets/sprites/ocean_storm.png');
+  this.load.spritesheet('obj','assets/sprites/blackbird.png',31,64,4);
+  this.load.spritesheet('player','assets/sprites/aircraftcarrier.png',96,64,23);
   
 },
 
