@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="
+      width=device-width,
+      initial-scale=1,
+      maximum-scale=1,
+      minimum-scale=1,
+      user-scalable=no"
+    >
+    <style>
+      body {
+        background: black;
+        padding: 0px;
+        margin: 0px;
+      }
+    </style>
+    <title>Shoot to thrill</title>
+  </head>
+  <body>
+  <script src="js/phaser.js"></script>
+  <script src="js/play.js"></script>
+    <script>
+      var game = new Phaser.Game(320,568);
+      game.state.add('Play', st.Play);
+      game.state.start('Play');
+    </script>
+  </body>
+</html>
+Status API Training Shop Blog About
