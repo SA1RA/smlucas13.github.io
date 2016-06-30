@@ -16,7 +16,8 @@ rome.prototype = {
   
   //audio load
   //sprites
-  this.load.image('background','project/field.png');
+  this.load.image('background','project/field.gif');
+  this.load.image('legion','project/turtle1.gif');
   },
 }
 
