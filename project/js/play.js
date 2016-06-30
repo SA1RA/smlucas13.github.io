@@ -6,7 +6,7 @@ rome.play = function () {};
 rome.prototype = {
   init: function () {
   //boot
-  console.log("%c~~~ Booting the st ~~~\n Compliments of Alucard and others",
+  console.log("%c~~~ Booting the st ~~~\n Compliments of saml",
   "color:#fdf6e3; background:#07364");
   },
   preload: function () {
