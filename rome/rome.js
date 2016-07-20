@@ -28,11 +28,11 @@ rome.Play.prototype = {
   create: function () {
     //background
     this.background = this.add.tileSprite(0,0,800,800,'background');
-    this.background.autoScroll(0,10);
+    this.background.autoScroll(-10,0);
     this.background.scale.set(1);
     
     //player
-    this.player = this.add.sprite(100,400,'player');
+    this.player = this.add.sprite(700,200,'player');
     this.player.scale.set(3);
     this.player.anchor.setTo(0.5, 0.5);
     //this.player.animations.add('blink');
