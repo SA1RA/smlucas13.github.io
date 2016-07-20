@@ -18,7 +18,7 @@ rome.Play.prototype = {
     this.scale.pageAlignVertically = true;
     
     //sprites
-    this.load.image('background','background_rome3.gif');
+    this.load.image('background','background_rome4.gif');
     this.load.spritesheet('player','roman.gif',27,27,2);
   },
 
