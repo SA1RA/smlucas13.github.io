@@ -13,6 +13,9 @@ rome.Play.prototype = {
   },
 
   preload: function () {
+    //movment keys
+    this.cursors = game.input.keyboard.createCursorKeys();
+    
     //game_screen
     this.scale.pageAlignHorizontally = true;
     this.scale.pageAlignVertically = true;
@@ -37,5 +40,12 @@ rome.Play.prototype = {
   },
 
   update: function () {
+    //controls
+    if (this.cursors.left.isDown) {
+      this.player.body.velocity.x = -200;
+    }
+    if (this.cursors.right.isDown) {
+      this.player.body.velocity.x = 200;
+    }
   }
 }
