@@ -2,13 +2,13 @@
 
 'use strict'
 var st = {};
-st.Play = function () {};
+rome.Play = function () {};
 
-st.Play.prototype = {
+rome.Play.prototype = {
 
   init: function () {
     //boot
-    console.log("%c~~~ Booting the st ~~~\n Compliments of Alucard and others",
+    console.log("%c~~~ Booting the Roma_Invicta ~~~\n Compliments of smlucas13",
                 "color:#fdf6e3; background:#07364");
   },
 
@@ -18,13 +18,12 @@ st.Play.prototype = {
     this.scale.pageAlignVertically = true;
 
     //audio load
-    this.load.audio('ts', 'assets/audio/ts.mp3');
-    this.load.audio('jn', 'assets/audio/jn.mp3');
+    //this.load.audio('ts', 'assets/audio/ts.mp3');
+    //this.load.audio('jn', 'assets/audio/jn.mp3');
 
     //sprites
-    this.load.image('background','assets/sprites/os.png');
-    this.load.spritesheet('obj','assets/sprites/bb.png',31,64,4);
-    this.load.spritesheet('player','assets/sprites/ac.png',96,64,23);
+    this.load.image('background','background_rome1.jpg');
+    this.load.spritesheet('player','roman.png',96,64,23);
   },
 
   create: function () {
