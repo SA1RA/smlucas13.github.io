@@ -1,9 +1,30 @@
 <!doctype html>
 <html>
   <head>
-    <meta name="viewport" content=" width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
-    <style>body { background: black; padding: 0px; margin: 0px; }</style>
-    <title>smlucas13 Roma_Invicta</title>
-    <script src="rome.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="
+      width=device-width,
+      initial-scale=1,
+      maximum-scale=1,
+      minimum-scale=1,
+      user-scalable=no"
+    >
+    <style>
+      body {
+        background: black;
+        padding: 0px;
+        margin: 0px;
+      }
+    </style>
+    <title>Roma_Invicta</title>
   </head>
+  <body>
+  <script src="js/phaser.js"></script>
+  <script src="js/rome.js"></script>
+    <script>
+      var game = new Phaser.Game(800,600);
+      game.state.add('Play', rome.Play);
+      game.state.start('Play');
+    </script>
+  </body>
 </html>
