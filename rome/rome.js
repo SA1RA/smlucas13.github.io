@@ -27,7 +27,12 @@ rome.Play.prototype = {
     this.background = this.add.tileSprite(0,0,800,800,'background');
     this.background.autoScroll(0,0);
     this.background.scale.set(1);
-
+    
+    //player
+    this.player = this.add.sprite(100,400,'player');
+    this.player.anchor.setTo(0.5, 0.5);
+    this.player.animations.add('blink');
+    this.player.animations.play('blink',2,true);
     
   },
 
