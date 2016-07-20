@@ -36,7 +36,7 @@ rome.Play.prototype = {
     //this.startSound.play();
 
     //background
-    this.background = this.add.tileSprite(0,0,800,600,'background');
+    this.background = this.add.tileSprite(0,0,320,568,'background');
     this.background.autoScroll(50,0);
     this.background.scale.set(1);
 
