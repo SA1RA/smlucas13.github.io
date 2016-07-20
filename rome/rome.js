@@ -1,4 +1,4 @@
-// state: st.play
+// state: rome.play
 
 'use strict'
 var rome = {};
@@ -18,13 +18,13 @@ rome.Play.prototype = {
     this.scale.pageAlignVertically = true;
     
     //sprites
-    this.load.image('background','background_rome1.gif');
+    this.load.image('background','background_rome3.gif');
     this.load.spritesheet('player','roman.gif',27,27,2);
   },
 
   create: function () {
     //background
-    this.background = this.add.tileSprite(0,0,320,568,'background');
+    this.background = this.add.tileSprite(0,0,800,800,'background');
     this.background.autoScroll(50,0);
     this.background.scale.set(1);
 
