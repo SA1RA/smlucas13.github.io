@@ -31,6 +31,8 @@ rome.Play.prototype = {
     this.background.autoScroll(-10,0);
     this.background.scale.set(1);
     
+    game.physics.p2.enable([player]);
+    
     //player
     this.player = this.add.sprite(100,400,'player');
     this.player.scale.set(3);
