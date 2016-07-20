@@ -18,14 +18,14 @@ rome.Play.prototype = {
     this.scale.pageAlignVertically = true;
     
     //sprites
-    this.load.image('background','background_rome4.gif');
+    this.load.image('background','background_rome5.gif');
     this.load.spritesheet('player','roman.gif',27,27,2);
   },
 
   create: function () {
     //background
     this.background = this.add.tileSprite(0,0,800,800,'background');
-    this.background.autoScroll(50,0);
+    this.background.autoScroll(0,0);
     this.background.scale.set(1);
 
     
