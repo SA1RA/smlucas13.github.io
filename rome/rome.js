@@ -22,8 +22,8 @@ rome.Play.prototype = {
     //this.load.audio('jn', 'assets/audio/jn.mp3');
 
     //sprites
-    this.load.image('background','background_rome1.jpg');
-    this.load.spritesheet('player','roman.png',96,64,23);
+    this.load.image('background','background_rome1.gif');
+    this.load.spritesheet('player','roman.gif',27,27,2);
   },
 
   create: function () {
