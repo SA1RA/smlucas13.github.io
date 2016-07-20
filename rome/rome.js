@@ -30,21 +30,21 @@ rome.Play.prototype = {
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     //audio start
-    this.startSound = this.game.add.audio('jn');
-    this.startSound.play();
-    this.startSound = this.game.add.audio('ts');
-    this.startSound.play();
+    //this.startSound = this.game.add.audio('jn');
+    //this.startSound.play();
+    //this.startSound = this.game.add.audio('ts');
+    //this.startSound.play();
 
     //background
-    this.background = this.add.tileSprite(0,0,320,568,'background');
+    this.background = this.add.tileSprite(0,0,800,600,'background');
     this.background.autoScroll(50,0);
     this.background.scale.set(1);
 
     //obj
-    this.obj = this.add.sprite(31,64,'obj');
-    this.obj.anchor.setTo(0.5, 0.5);
-    this.obj.animations.add('blink');
-    this.obj.animations.play('blink',2,true);
+    //this.obj = this.add.sprite(31,64,'obj');
+    //this.obj.anchor.setTo(0.5, 0.5);
+    //this.obj.animations.add('blink');
+    //this.obj.animations.play('blink',2,true);
 
     //player
     this.player = this.add.sprite(100,400,'player');
@@ -63,7 +63,7 @@ rome.Play.prototype = {
   update: function () {
 
     //collider
-    game.physics.arcade.collide(this.player,this.obj,this.handleCollision);
+    //game.physics.arcade.collide(this.player,this.obj,this.handleCollision);
 
     //boundaries
     //if (this.player.x < 1) {
@@ -74,10 +74,10 @@ rome.Play.prototype = {
     //}
 
     //falling
-    this.obj.y += 10;
-    if (this.obj.y > 400) {
+    //this.obj.y += 10;
+    //if (this.obj.y > 400) {
       //this.obj.y = 10;
-      this.obj.x = game.rnd.integerInRange(31,289);
+      //this.obj.x = game.rnd.integerInRange(31,289);
     }
 
     //tracking
