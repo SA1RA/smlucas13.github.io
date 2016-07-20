@@ -32,7 +32,7 @@ rome.Play.prototype = {
     this.background.scale.set(1);
     
     //player
-    this.player = this.add.sprite(700,200,'player');
+    this.player = this.add.sprite(200,200,'player');
     this.player.scale.set(3);
     this.player.anchor.setTo(0.5, 0.5);
     //this.player.animations.add('blink');
