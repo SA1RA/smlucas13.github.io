@@ -36,6 +36,10 @@ rome.Play.prototype = {
     this.player.anchor.setTo(0.5, 0.5);
     //this.player.animations.add('blink');
     //this.player.animations.play('blink',2,true);
+    game.physics.arcade.enable(this.player);
+    this.player.body.colliderWorldBounds = true;
+    this.player.body.bounce.setTo(0.3);
+    this.player.body.drag.setTo(3000);
     
   },
 
