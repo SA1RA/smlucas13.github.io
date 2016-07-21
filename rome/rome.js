@@ -47,6 +47,15 @@ rome.Play.prototype = {
   },
 
   update: function () {
+    
+    //boundaries
+    if (this.player.x < 1) {
+      this.player.x = 2;
+    }
+    if (this.player.x > 799) {
+      this.player.x = 798;
+    }
+    
     //controls
     if (this.cursors.left.isDown) {
       this.player.body.velocity.x = -200;
