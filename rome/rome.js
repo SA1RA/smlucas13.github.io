@@ -44,6 +44,8 @@ rome.Play.prototype = {
     this.player.body.bounce.setTo(0.3);
     this.player.body.drag.setTo(3000);
     
+    //movment keys
+    this.cursors = game.input.keyboard.createCursorKeys();
   },
 
   update: function () {
