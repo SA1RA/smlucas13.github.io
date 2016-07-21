@@ -58,10 +58,10 @@ rome.Play.prototype = {
     
     //controls
     if (this.cursors.left.isDown) {
-      this.player.body.velocity.x = -200;
+      this.player.body.velocity.x = -400;
     }
     if (this.cursors.right.isDown) {
-      this.player.body.velocity.x = 200;
+      this.player.body.velocity.x = 400;
     }
   }
 }
