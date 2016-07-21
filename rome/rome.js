@@ -31,19 +31,17 @@ rome.Play.prototype = {
     this.background.autoScroll(-10,0);
     this.background.scale.set(1);
     
-    game.physics.p2.enable([player]);
-    
     //player
     this.player = this.add.sprite(100,400,'player');
     this.player.scale.set(3);
-    this.player.anchor.setTo(7, 6);
+    this.player.anchor.setTo(0.5, 0.5);
     //this.player.animations.add('blink');
     //this.player.animations.play('blink',2,true);
     game.physics.arcade.enable(this.player);
     this.player.body.colliderWorldBounds = true;
     this.player.body.bounce.setTo(0.3);
     this.player.body.drag.setTo(3000);
-    
+  
     //movment keys
     this.cursors = game.input.keyboard.createCursorKeys();
   },
