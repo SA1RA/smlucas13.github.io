@@ -52,8 +52,8 @@ rome.Play.prototype = {
     if (this.player.x < 9) {
       this.player.x = 10;
     }
-    if (this.player.x > 700) {
-      this.player.x = 699;
+    if (this.player.x > 750) {
+      this.player.x = 749;
     }
     
     //controls
