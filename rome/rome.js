@@ -49,11 +49,11 @@ rome.Play.prototype = {
   update: function () {
     
     //boundaries
-    if (this.player.x < 1) {
-      this.player.x = 2;
+    if (this.player.x < 9) {
+      this.player.x = 10;
     }
-    if (this.player.x > 799) {
-      this.player.x = 798;
+    if (this.player.x > 700) {
+      this.player.x = 699;
     }
     
     //controls
