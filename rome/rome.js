@@ -28,7 +28,7 @@ rome.Play.prototype = {
   create: function () {
     //background
     this.background = this.add.tileSprite(0,0,800,800,'background');
-    this.background.autoScroll(-10,0);
+    this.background.autoScroll(0,0);
     this.background.scale.set(1);
     
     //player
