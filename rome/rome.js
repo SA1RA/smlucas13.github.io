@@ -38,9 +38,6 @@ rome.Play.prototype = {
     this.player.animations.add('blink');
     this.player.animations.play('blink',2,true);
     game.physics.arcade.enable(this.player);
-    this.player.body.colliderWorldBounds = true;
-    this.player.body.bounce.setTo(0.3);
-    this.player.body.drag.setTo(3000);
   
     //movment keys
     this.cursors = game.input.keyboard.createCursorKeys();
