@@ -35,8 +35,8 @@ rome.Play.prototype = {
     this.player = this.add.sprite(400,750,'player');
     this.player.scale.set(3);
     this.player.anchor.setTo(0.5, 0.5);
-    //this.player.animations.add('blink');
-    //this.player.animations.play('blink',6,true);
+    this.player.animations.add('blink');
+    this.player.animations.play('blink',6,true);
     game.physics.arcade.enable(this.player);
     this.player.body.drag.setTo(3000);
   
