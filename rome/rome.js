@@ -22,7 +22,7 @@ rome.Play.prototype = {
     
     //sprites
     this.load.image('background','background_rome5.gif');
-    this.load.spritesheet('player','roman.gif',29,29,6);
+    this.load.spritesheet('player','roman .gif',29,29,6);
   },
 
   create: function () {
