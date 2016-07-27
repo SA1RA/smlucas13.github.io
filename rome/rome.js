@@ -79,5 +79,7 @@ rome.Play.prototype = {
       //this.player.animations.add('blink');
       //this.player.animations.play('blink',11,true);
     }
+    this.player.animations.add('blink');
+    this.player.animations.play('blink',11,false);
   }
 }
