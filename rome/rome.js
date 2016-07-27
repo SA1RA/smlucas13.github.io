@@ -54,18 +54,24 @@ rome.Play.prototype = {
       this.player.x = 754;
     }
     
+    //animation
+    if (this.player.body.velocity.x = 400) {
+      this.player.animations.add('blink');
+      this.player.animations.play('blink',11,true);
+    }
+    
     //controls
     if (this.cursors.left.isDown) {
       this.player.body.velocity.x = -400;
-      this.player.animations.add('blink');
-      this.player.animations.play('blink',6,true);
+      //this.player.animations.add('blink');
+      //this.player.animations.play('blink',6,true);
       //flip
       
     }
     if (this.cursors.right.isDown) {
       this.player.body.velocity.x = 400;
-      this.player.animations.add('blink');
-      this.player.animations.play('blink',11,true);
+      //this.player.animations.add('blink');
+      //this.player.animations.play('blink',11,true);
     }
   }
 }
