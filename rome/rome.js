@@ -22,7 +22,7 @@ rome.Play.prototype = {
     
     //sprites
     this.load.image('background','background_rome5.gif');
-    this.load.spritesheet('player','roman.gif',27,27,2);
+    this.load.spritesheet('player','roman.gif',29,29,6);
   },
 
   create: function () {
@@ -35,6 +35,8 @@ rome.Play.prototype = {
     this.player = this.add.sprite(400,750,'player');
     this.player.scale.set(3);
     this.player.anchor.setTo(0.5, 0.5);
+    this.player.animations.add('blink');
+    this.player.animations.play('blink',2,true);
     //this.player.animations.add('blink');
     //this.player.animations.play('blink',2,true);
     game.physics.arcade.enable(this.player);
