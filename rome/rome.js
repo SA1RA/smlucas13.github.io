@@ -38,6 +38,7 @@ rome.Play.prototype = {
     //this.player.animations.add('blink');
     //this.player.animations.play('blink',6,true);
     game.physics.arcade.enable(this.player);
+    this.player.body.drag.setTo(3000);
   
     //movment keys
     this.cursors = game.input.keyboard.createCursorKeys();
