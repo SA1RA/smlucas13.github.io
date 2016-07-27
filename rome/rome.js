@@ -55,7 +55,7 @@ rome.Play.prototype = {
     }
     
     //animation
-    if (this.player.body.velocity.x = 400) {
+    if (this.player.body.velocity.x) {
       this.player.animations.add('blink');
       this.player.animations.play('blink',11,true);
     }
