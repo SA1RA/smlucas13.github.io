@@ -45,17 +45,18 @@ rome.Play.prototype = {
   },
 
   update: function () {
-    
+  
     //animation
-    if (this.cursors.left.isDown) {
+    if (this.player.body.velocity.x > 0) {
       this.player.animations.add('blink');
-      this.player.animations.play('blink',11,true);
+      this.player.animations.play('blink',11,true)
+    }
+    if (this.player.body.velocity.x = 0) {
+      this.player.animations.remove('blink');
+      this.player.animations.play('blink',0,false);
       //flip
     }
-    if (this.cursors.right.isDown) {
-      this.player.animations.add('blink');
-      this.player.animations.play('blink',11,true);
-    }
+    
     
     //boundaries
     if (this.player.x < 9) {
@@ -79,7 +80,5 @@ rome.Play.prototype = {
       //this.player.animations.add('blink');
       //this.player.animations.play('blink',11,true);
     }
-    this.player.animations.add('blink');
-    this.player.animations.play('blink',11,false);
   }
 }
