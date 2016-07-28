@@ -21,6 +21,7 @@ rome.Play.prototype = {
     this.scale.pageAlignVertically = true;
     
     //sprites
+    this.load.image('playeridle'),'romanidle.png');
     this.load.image('background','background_rome5.gif');
     this.load.spritesheet('player','roman.png',29,29,6);
   },
@@ -49,6 +50,9 @@ rome.Play.prototype = {
   
     //animation
     if (this.cursors.left.isDown) {
+      this.player.animations.play('blink',6,true)
+    }
+    if (this.cursors.right.isDown) {
       this.player.animations.play('blink',6,true)
     }
     
