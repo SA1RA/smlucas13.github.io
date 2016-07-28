@@ -21,7 +21,7 @@ rome.Play.prototype = {
     this.scale.pageAlignVertically = true;
     
     //sprites
-    this.load.image('playeridle'),'romanidle.png');
+    //this.load.image('playeridle'),'romanidle.png');
     this.load.image('background','background_rome5.gif');
     this.load.spritesheet('player','roman.png',29,29,6);
   },
