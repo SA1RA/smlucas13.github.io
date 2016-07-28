@@ -50,14 +50,14 @@ rome.Play.prototype = {
   
     //animation
     if (this.cursors.left.isDown) {
-      this.player.animations.play('blink',6,true)
+      this.player.animations.play('blink',11,true)
     }
     if (this.cursors.right.isDown) {
       this.player.animations.play('blink',16,true)
     }
-    //if (this.cursors.left.isUp) {
-    //  this.player.a('blink',6,true)
-    //}
+    if (this.player.body.velocity.x = 0) {
+      this.player.animations.play('blink',0,false)
+    }
     //if (this.cursors.right.isUp) {
     //  this.player = this.add.sprite(player.x,player.y,'playeridle');
     //}
@@ -74,7 +74,7 @@ rome.Play.prototype = {
     
     //controls
     if (this.cursors.left.isDown) {
-      this.player.body.velocity.x = -200;
+      this.player.body.velocity.x = -300;
       //this.player.animations.add('blink');
       //this.player.animations.play('blink',6,true);
       //flip
