@@ -51,10 +51,6 @@ rome.Play.prototype = {
     if (this.cursors.left.isDown) {
       this.player.animations.play('blink',6,true)
     }
-    if (this.player.body.velocity.x = 0) {
-      this.player.animations.play('blink',6,false);
-      //flip
-    }
     
     
     //boundaries
