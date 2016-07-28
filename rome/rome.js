@@ -53,7 +53,13 @@ rome.Play.prototype = {
       this.player.animations.play('blink',6,true)
     }
     if (this.cursors.right.isDown) {
-      this.player.animations.play('blink',6,true)
+      this.player = this.add.sprite(player.x,player.y,'playeridle');
+    }
+    if (this.cursors.left.isUp) {
+      this.player.a('blink',6,true)
+    }
+    if (this.cursors.right.isUp) {
+      this.player = this.add.sprite(player.x,player.y,'playeridle');
     }
     
     
