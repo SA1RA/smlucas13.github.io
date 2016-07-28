@@ -48,12 +48,12 @@ rome.Play.prototype = {
   
     //animation
     if (this.player.body.velocity.x > 0) {
-      this.player.animations.add('blink');
-      this.player.animations.play('blink',11,true)
+      this.player.animations.remove('blink');
+      this.player.animations.play('blink',0,false)
     }
     if (this.player.body.velocity.x = 0) {
-      this.player.animations.remove('blink');
-      this.player.animations.play('blink',0,false);
+      this.player.animations.add('blink');
+      this.player.animations.play('blink',11,true);
       //flip
     }
     
