@@ -55,7 +55,7 @@ rome.Play.prototype = {
     if (this.cursors.right.isDown) {
       this.player.animations.play('blink',16,true)
     }
-    if (this.player.body.velocity.x = 0) {
+    if (this.cursors.up.isDown) {
       this.player.animations.play('blink',0,false)
     }
     //if (this.cursors.right.isUp) {
