@@ -74,7 +74,7 @@ rome.Play.prototype = {
     
     //controls
     if (this.cursors.left.isDown) {
-      this.player.body.velocity.x = -400;
+      this.player.body.velocity.x = -200;
       //this.player.animations.add('blink');
       //this.player.animations.play('blink',6,true);
       //flip
