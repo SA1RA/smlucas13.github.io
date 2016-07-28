@@ -55,12 +55,12 @@ rome.Play.prototype = {
     if (this.cursors.right.isDown) {
       this.player = this.add.sprite(player.x,player.y,'playeridle');
     }
-    if (this.cursors.left.isUp) {
-      this.player.a('blink',6,true)
-    }
-    if (this.cursors.right.isUp) {
-      this.player = this.add.sprite(player.x,player.y,'playeridle');
-    }
+    //if (this.cursors.left.isUp) {
+    //  this.player.a('blink',6,true)
+    //}
+    //if (this.cursors.right.isUp) {
+    //  this.player = this.add.sprite(player.x,player.y,'playeridle');
+    //}
     
     
     //boundaries
