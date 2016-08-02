@@ -2,7 +2,7 @@
 
 var C = {
   background: {
-    image: 'background.gif',
+    image: 'background_rome5.gif',
     scale: 1
   },
   roman: {
@@ -90,15 +90,15 @@ class PlayState {
     this.background.scale.set(C.background.scale);
 
     // roman
-    this.roman = this.add.sprite(C.dodger.startx,C.dodger.starty,'dodger');
+    this.roman = this.add.sprite(C.roman.startx,C.roman.starty,'roman');
     //this.roman.smoothed = false; 
     //this.roman.scale.set(1);
     this.roman.anchor.set(0.5,0.5);
     this.roman.animations.add('blink');
-    this.roman.animations.play('blink',C.dodger.frames,true);
+    this.roman.animations.play('blink',C.roman.frames,true);
     game.physics.arcade.enable(this.roman);
     this.roman.body.collideWorldBounds = true;
-    this.roman.body.bounce.setTo(C.dodger.bounce);
+    this.roman.body.bounce.setTo(C.roman.bounce);
     this.roman.body.drag.setTo(C.roman.drag);
 
     // dodgeme
