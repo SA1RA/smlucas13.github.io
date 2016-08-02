@@ -85,7 +85,7 @@ class PlayState {
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     // background
-    this.background = this.add.tileSprite(0,0,320,568,'background');
+    this.background = this.add.tileSprite(0,0,800,800,'background');
     //this.background.autoScroll(0,C.background.scroll);
     this.background.scale.set(C.background.scale);
 
