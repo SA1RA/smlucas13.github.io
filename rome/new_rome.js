@@ -91,8 +91,8 @@ class PlayState {
 
     // roman
     this.roman = this.add.sprite(C.roman.startx,C.roman.starty,'roman');
-    //this.roman.smoothed = false; 
-    //this.roman.scale.set(1);
+    this.roman.smoothed = false; 
+    this.roman.scale.set(3);
     this.roman.anchor.set(0.5,0.5);
     this.roman.animations.add('blink');
     this.roman.animations.play('blink',C.roman.frames,true);
