@@ -155,7 +155,7 @@ class EndState {
 
 }
 
-var game = new Phaser.Game(320,568);
+var game = new Phaser.Game(800,800);
 game.state.add('Boot', BootState);
 game.state.add('Preload', PreloadState);
 game.state.add('Start', StartState);
