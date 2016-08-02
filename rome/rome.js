@@ -1,6 +1,6 @@
 // state: rome.play
+'use strict';
 
-'use strict'
 var rome = {};
 rome.Play = function () {};
 
