@@ -94,9 +94,9 @@ class PlayState {
     this.roman.smoothed = false; 
     this.roman.scale.set(3);
     this.roman.anchor.set(0.5,0.5);
-    this.roman.animations.add('left', [13, 25], 11, true);
+    this.roman.animations.add('left', [13, 24], 11, true);
     this.roman.animations.add('idle', [27], 1, true);
-    this.roman.animations.add('right', [2, 11], 11, true);
+    this.roman.animations.add('right', [2, 10], 11, true);
     game.physics.arcade.enable(this.roman);
     this.roman.body.collideWorldBounds = true;
     this.roman.body.bounce.setTo(C.roman.bounce);
