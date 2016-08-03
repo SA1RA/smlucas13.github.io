@@ -152,11 +152,11 @@ class PlayState {
 
             if (this.facing == 'left')
             {
-                this.roman.frame = 0;
+                this.roman.frame = 1;
             }
             else
             {
-                this.roman.frame = 5;
+                this.roman.frame = 1;
             }
 
             this.facing = 'idle';
