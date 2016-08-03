@@ -131,7 +131,7 @@ class PlayState {
         if (this.facing != 'left')
         {
             this.roman.animations.play('left');
-            facing = 'left';
+            this.facing = 'left';
         }
     }
     else if (this.cursors.right.isDown)
@@ -141,7 +141,7 @@ class PlayState {
         if (this.facing != 'right')
         {
             this.roman.animations.play('right');
-            facing = 'right';
+            this.facing = 'right';
         }
     }
     else
