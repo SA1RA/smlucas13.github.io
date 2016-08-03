@@ -10,8 +10,8 @@ var C = {
     width: 29,
     height: 29,
     frames: 6,
-    startx: 160,
-    starty: 500,
+    startx: 400,
+    starty: 750,
     bounce: 0.3,
     drag: 3000,
     speed: 800
