@@ -123,9 +123,14 @@ class PlayState {
   update() {
     if (this.cursors.left.isDown) {
       this.roman.body.velocity.x = -C.roman.speed;
+      this.roman.animations.play('blink',C.roman.frames,true);
     }
     if (this.cursors.right.isDown) {
       this.roman.body.velocity.x = C.roman.speed;
+      this.roman.animations.play('blink',C.roman.frames,true);
+    }
+    if (this.roman.body.velocity.x = 0) {
+      this.roman.animations.play('blink',C.roman.frames,false);
     }
     //if (this.dodgeme.y >= 568) {
     //  this.resetDodgeme();
