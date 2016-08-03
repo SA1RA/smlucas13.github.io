@@ -159,7 +159,7 @@ class PlayState {
                 this.roman.frame = 5;
             }
 
-            facing = 'idle';
+            this.facing = 'idle';
         }
     }
     //if (this.dodgeme.y >= 568) {
