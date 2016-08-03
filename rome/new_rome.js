@@ -9,7 +9,7 @@ var C = {
     image: 'roman.png',
     width: 29,
     height: 29,
-    frames: 6,
+    frames: 27,
     startx: 400,
     starty: 750,
     bounce: 0.3,
@@ -94,9 +94,9 @@ class PlayState {
     this.roman.smoothed = false; 
     this.roman.scale.set(3);
     this.roman.anchor.set(0.5,0.5);
-    player.animations.add('left', [0,], 10, true);
-    player.animations.add('idle', [4], 20, true);
-    player.animations.add('right', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 10, true);
+    player.animations.add('left', [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25], 11, true);
+    player.animations.add('idle', [27], 1, true);
+    player.animations.add('right', [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 11, true);
     game.physics.arcade.enable(this.roman);
     this.roman.body.collideWorldBounds = true;
     this.roman.body.bounce.setTo(C.roman.bounce);
