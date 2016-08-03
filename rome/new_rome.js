@@ -95,7 +95,6 @@ class PlayState {
     this.roman.scale.set(3);
     this.roman.anchor.set(0.5,0.5);
     this.roman.animations.add('blink');
-    this.roman.animations.play('blink',C.roman.frames,true);
     game.physics.arcade.enable(this.roman);
     this.roman.body.collideWorldBounds = true;
     this.roman.body.bounce.setTo(C.roman.bounce);
