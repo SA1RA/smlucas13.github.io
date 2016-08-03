@@ -128,7 +128,7 @@ class PlayState {
     {
         this.roman.body.velocity.x = -150;
 
-        if (this.roman.facing != 'left')
+        if (this.facing != 'left')
         {
             this.roman.animations.play('left');
             facing = 'left';
@@ -150,7 +150,7 @@ class PlayState {
         {
             this.roman.animations.stop();
 
-            if (facing == 'left')
+            if (this.facing == 'left')
             {
                 this.roman.frame = 0;
             }
