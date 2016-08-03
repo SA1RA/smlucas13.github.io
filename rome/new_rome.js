@@ -94,9 +94,9 @@ class PlayState {
     this.roman.smoothed = false; 
     this.roman.scale.set(3);
     this.roman.anchor.set(0.5,0.5);
-    roman.animations.add('left', [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25], 11, true);
-    roman.animations.add('idle', [27], 1, true);
-    roman.animations.add('right', [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 11, true);
+    this.roman.animations.add('left', [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25], 11, true);
+    this.roman.animations.add('idle', [27], 1, true);
+    this.roman.animations.add('right', [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 11, true);
     game.physics.arcade.enable(this.roman);
     this.roman.body.collideWorldBounds = true;
     this.roman.body.bounce.setTo(C.roman.bounce);
@@ -122,25 +122,25 @@ class PlayState {
   }
 
   update() {
-    roman.body.velocity.x = 0;
+    this.roman.body.velocity.x = 0;
 
     if (cursors.left.isDown)
     {
-        roman.body.velocity.x = -150;
+        this.roman.body.velocity.x = -150;
 
         if (facing != 'left')
         {
-            roman.animations.play('left');
+            this.roman.animations.play('left');
             facing = 'left';
         }
     }
     else if (cursors.right.isDown)
     {
-        roman.body.velocity.x = 150;
+        this.roman.body.velocity.x = 150;
 
         if (facing != 'right')
         {
-            roman.animations.play('right');
+            this.roman.animations.play('right');
             facing = 'right';
         }
     }
@@ -148,15 +148,15 @@ class PlayState {
     {
         if (facing != 'idle')
         {
-            roman.animations.stop();
+            this.roman.animations.stop();
 
             if (facing == 'left')
             {
-                roman.frame = 0;
+                this.roman.frame = 0;
             }
             else
             {
-                roman.frame = 5;
+                this.roman.frame = 5;
             }
 
             facing = 'idle';
