@@ -122,25 +122,25 @@ class PlayState {
   }
 
   update() {
-    player.body.velocity.x = 0;
+    roman.body.velocity.x = 0;
 
     if (cursors.left.isDown)
     {
-        player.body.velocity.x = -150;
+        roman.body.velocity.x = -150;
 
         if (facing != 'left')
         {
-            player.animations.play('left');
+            roman.animations.play('left');
             facing = 'left';
         }
     }
     else if (cursors.right.isDown)
     {
-        player.body.velocity.x = 150;
+        roman.body.velocity.x = 150;
 
         if (facing != 'right')
         {
-            player.animations.play('right');
+            roman.animations.play('right');
             facing = 'right';
         }
     }
@@ -148,15 +148,15 @@ class PlayState {
     {
         if (facing != 'idle')
         {
-            player.animations.stop();
+            roman.animations.stop();
 
             if (facing == 'left')
             {
-                player.frame = 0;
+                roman.frame = 0;
             }
             else
             {
-                player.frame = 5;
+                roman.frame = 5;
             }
 
             facing = 'idle';
