@@ -126,7 +126,7 @@ class PlayState {
 
     if (this.cursors.left.isDown)
     {
-        this.roman.body.velocity.x = -150;
+        this.roman.body.velocity.x = -300;
 
         if (this.facing != 'left')
         {
@@ -136,7 +136,7 @@ class PlayState {
     }
     else if (this.cursors.right.isDown)
     {
-        this.roman.body.velocity.x = 150;
+        this.roman.body.velocity.x = 300;
 
         if (this.facing != 'right')
         {
