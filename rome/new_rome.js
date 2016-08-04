@@ -133,13 +133,13 @@ class PlayState {
     
     if (this.atkkl.isDown) {
         if (this.facing != 'left') {
-            this.roman.animations.play('right');
+            this.roman.animations.play('atkl');
             this.facing = 'left';
         }
     }
     else if (this.atkkr.isDown) {
         if (this.facing != 'right'){
-            this.roman.animations.play('left');
+            this.roman.animations.play('atkr');
             this.facing = 'right';
         }
     }
@@ -147,14 +147,14 @@ class PlayState {
     else if (this.left.isDown) {
         this.roman.body.velocity.x = -300;
         if (this.facing != 'left') {
-            this.roman.animations.play('atkl');
+            this.roman.animations.play('left');
             this.facing = 'left';
         }
     }
     else if (this.right.isDown) {
         this.roman.body.velocity.x = 300;
         if (this.facing != 'right'){
-            this.roman.animations.play('atkr');
+            this.roman.animations.play('right');
             this.facing = 'right';
         }
     }
