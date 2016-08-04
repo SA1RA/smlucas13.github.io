@@ -126,10 +126,10 @@ class PlayState {
 
   update() {
     this.roman.body.velocity.x = 0;
-    if (this.cursors.e.isDown) {
+    if (this.cursors.E.isDown) {
       this.roman.animations.play('attackr');
     }
-    //if (this.cursors.q.isDown) {
+    //if (this.cursors.Q.isDown) {
     //  this.roman.animations.play('attackl');
     //}
     //}
