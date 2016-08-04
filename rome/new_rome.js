@@ -123,6 +123,8 @@ class PlayState {
     // movement keys
     this.cursors = game.input.keyboard.createCursorKeys();
     this.atkkr = game.input.keyboard.addKey(Phaser.Keyboard.E);
+    this.right = game.input.keyboard.addKey(Phaser.Keyboard.D);
+    this.left = game.input.keyboard.addKey(Phaser.Keyboard.A);
   }
 
   update() {
