@@ -122,11 +122,12 @@ class PlayState {
 
     // movement keys
     this.cursors = game.input.keyboard.createCursorKeys();
+    attackkeyr = game.input.keyboard.addKey(Phaser.Keyboard.E);
   }
 
   update() {
     this.roman.body.velocity.x = 0;
-    if (this.cursors.space.isDown) {
+    if (this.cursors.E.isDown) {
       this.roman.animations.play('attackr');
     }
     //if (this.cursors.Q.isDown) {
