@@ -122,16 +122,17 @@ class PlayState {
 
     // movement keys
     //this.cursors = game.input.keyboard.createCursorKeys();
-    //this.atkkr = game.input.keyboard.addKey(Phaser.Keyboard.E);
+    this.atkkr = game.input.keyboard.addKey(Phaser.KeyCode.E);
+    this.atkkl = game.input.keyboard.addKey(Phaser.KeyCode.Q);
     this.right = game.input.keyboard.addKey(Phaser.KeyCode.D);
     this.left = game.input.keyboard.addKey(Phaser.KeyCode.A);
   }
 
   update() {
-    //this.roman.body.velocity.x = 0;
-    //if (this.cursors.E.isDown) {
-    //  this.roman.animations.play('attackr');
-    //}
+    this.roman.body.velocity.x = 0;
+    if (this.cursors.E.isDown) {
+      this.roman.animations.play('attackr');
+    }
     //if (this.cursors.Q.isDown) {
     //  this.roman.animations.play('attackl');
     //}
