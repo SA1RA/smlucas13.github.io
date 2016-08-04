@@ -132,7 +132,7 @@ class PlayState {
     this.roman.body.velocity.x = 0;
     
     if (this.atkkl.isDown) {
-        this.roman.ainations.play('attakl');
+        this.roman.ainations.play('attackl');
         if (this.facing != 'left') {
             this.roman.animations.play('left');
             this.facing = 'left';
