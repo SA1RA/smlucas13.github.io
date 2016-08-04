@@ -138,7 +138,7 @@ class PlayState {
             this.facing = 'left';
         }
     }
-    else if (this.atkkr.isDown && game.time.now > AttackTimer) {
+    else if (this.atkkr.isDown && this.game.time.now > AttackTimer) {
         if (this.facing != 'right'){
             this.roman.animations.play('atkr');
             this.AttackTimer = game.time.now + 750;
@@ -146,7 +146,7 @@ class PlayState {
         }
     }
     
-    else if (this.left.isDown && game.time.now > AttackTimer) {
+    else if (this.left.isDown && this.game.time.now > AttackTimer) {
         this.roman.body.velocity.x = -300;
         if (this.facing != 'left') {
             this.roman.animations.play('left');
