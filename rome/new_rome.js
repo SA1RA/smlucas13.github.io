@@ -7,9 +7,9 @@ var C = {
   },
   roman: {
     image: 'roman.png',
-    width: 29,
-    height: 29,
-    frames: 27,
+    width: 36,
+    height: 36,
+    frames: 31,
     startx: 400,
     starty: 750,
     bounce: 0.3,
@@ -97,6 +97,9 @@ class PlayState {
     this.roman.animations.add('left', [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], 11, true);
     this.roman.animations.add('idle', [27], 1, true);
     this.roman.animations.add('right', [2, 3, 4, 5, 6, 7, 8,  9, 10], 11, true);
+    this.roman.animations.add('attackr', [30], 1, true);
+    this.roman.animations.add('attackl', [31], 1, true);
+    
     game.physics.arcade.enable(this.roman);
     this.roman.body.collideWorldBounds = true;
     this.roman.body.bounce.setTo(C.roman.bounce);
@@ -123,39 +126,35 @@ class PlayState {
 
   update() {
     this.roman.body.velocity.x = 0;
-
-    if (this.cursors.left.isDown)
-    {
+    if (this.cursors.e.isDown) {
+      this.roman.animations.play('attackr');
+    }
+    if (this.cursors.q.isDown) {
+      this.roman.animations.play('attackl');
+    }
+    //}
+    //}
+    if (this.cursors.left.isDown){
         this.roman.body.velocity.x = -300;
-
-        if (this.facing != 'left')
-        {
+        if (this.facing != 'left'){
             this.roman.animations.play('left');
             this.facing = 'left';
         }
     }
-    else if (this.cursors.right.isDown)
-    {
+    else if (this.cursors.right.isDown){
         this.roman.body.velocity.x = 300;
-
-        if (this.facing != 'right')
-        {
+        if (this.facing != 'right'){
             this.roman.animations.play('right');
             this.facing = 'right';
         }
     }
-    else
-    {
-        if (this.facing != 'idle')
-        {
+    else{
+        if (this.facing != 'idle'){
             this.roman.animations.stop();
-
-            if (this.facing == 'left')
-            {
+            if (this.facing == 'left'){
                 this.roman.frame = 22;
             }
-            else
-            {
+            else{
                 this.roman.frame = 6;
             }
 
