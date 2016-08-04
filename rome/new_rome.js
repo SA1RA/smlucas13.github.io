@@ -122,8 +122,8 @@ class PlayState {
 
     // movement keys
     this.cursors = game.input.keyboard.createCursorKeys();
-    this.atkkr = game.input.keyboard.addKey(Phaser.Keyboard.E);
-    this.right = game.input.keyboard.addKey(Phaser.Keyboard.D);
+    //this.atkkr = game.input.keyboard.addKey(Phaser.Keyboard.E);
+    this.right = game.input.keyboard.addKey(Phaser.KeyCode.KEY.D);
     this.left = game.input.keyboard.addKey(Phaser.Keyboard.A);
   }
 
@@ -144,7 +144,7 @@ class PlayState {
             this.facing = 'left';
         }
     }
-    else if (this.cursors.right.isDown) {
+    else if (this.cursors.D.isDown) {
         this.roman.body.velocity.x = 300;
         if (this.facing != 'right'){
             this.roman.animations.play('right');
