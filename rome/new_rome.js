@@ -130,6 +130,7 @@ class PlayState {
 
   update() {
     this.roman.body.velocity.x = 0;
+    
     if (this.atkkl.isDown) {
         this.roman.ainations.play('attakl');
         if (this.facing != 'left') {
@@ -137,20 +138,14 @@ class PlayState {
             this.facing = 'left';
         }
     }
-    else if (this.right.isDown) {
+    else if (this.atkkr.isDown) {
         this.roman.aniations.play('attackr');
         if (this.facing != 'right'){
             this.roman.animations.play('right');
             this.facing = 'right';
         }
     }
-    --------------------
-    //if (this.atkkl.isDown) {
-    //  this.roman.animations.play('attackl');
-    //}
-    //else {
-    //  this.roman.animations.play('idle')
-    //}
+    
     else if (this.left.isDown) {
         this.roman.body.velocity.x = -300;
         if (this.facing != 'left') {
@@ -191,6 +186,13 @@ class PlayState {
   //    }
   //    this.dodgeme.x = game.rnd.integerInRange(0,320);
   //}
+  --------------------
+    //if (this.atkkl.isDown) {
+    //  this.roman.animations.play('attackl');
+    //}
+    //else {
+    //  this.roman.animations.play('idle')
+    //}
 
   handleCollision() {
     game.state.start('End')
