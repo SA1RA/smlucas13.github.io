@@ -147,14 +147,14 @@ class PlayState {
     else if (this.left.isDown) {
         this.roman.body.velocity.x = -300;
         if (this.facing != 'left') {
-            this.roman.animations.play('left');
+            this.roman.animations.play('atkr');
             this.facing = 'left';
         }
     }
     else if (this.right.isDown) {
         this.roman.body.velocity.x = 300;
         if (this.facing != 'right'){
-            this.roman.animations.play('right');
+            this.roman.animations.play('atkl');
             this.facing = 'right';
         }
     }
