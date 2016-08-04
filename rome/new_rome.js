@@ -144,7 +144,7 @@ class PlayState {
             this.facing = 'left';
         }
     }
-    else if (this.cursors.right.isDown) {
+    else if (this.right.isDown) {
         this.roman.body.velocity.x = 300;
         if (this.facing != 'right'){
             this.roman.animations.play('right');
