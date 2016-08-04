@@ -1,5 +1,5 @@
 "use strict";
-
+var AttakTimer = 0;
 var C = {
   background: {
     image: 'background_rome5.gif',
@@ -134,17 +134,19 @@ class PlayState {
     if (this.atkkl.isDown) {
         if (this.facing != 'left') {
             this.roman.animations.play('atkl');
+            this.AttackTimer = game.time.now + 750;
             this.facing = 'left';
         }
     }
-    else if (this.atkkr.isDown) {
+    else if (this.atkkr.isDown && game.time.now > AttackTimer) {
         if (this.facing != 'right'){
             this.roman.animations.play('atkr');
+            this.AttackTimer = game.time.now + 750;
             this.facing = 'right';
         }
     }
     
-    else if (this.left.isDown) {
+    else if (this.left.isDown && game.time.now > AttackTimer) {
         this.roman.body.velocity.x = -300;
         if (this.facing != 'left') {
             this.roman.animations.play('left');
