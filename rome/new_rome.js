@@ -134,27 +134,27 @@ class PlayState {
     //}
     //}
     //}
-    if (this.cursors.left.isDown){
+    if (this.cursors.left.isDown) {
         this.roman.body.velocity.x = -300;
-        if (this.facing != 'left'){
+        if (this.facing != 'left') {
             this.roman.animations.play('left');
             this.facing = 'left';
         }
     }
-    else if (this.cursors.right.isDown){
+    else if (this.cursors.right.isDown) {
         this.roman.body.velocity.x = 300;
         if (this.facing != 'right'){
             this.roman.animations.play('right');
             this.facing = 'right';
         }
     }
-    else{
-        if (this.facing != 'idle'){
+    else {
+        if (this.facing != 'idle') {
             this.roman.animations.stop();
-            if (this.facing == 'left'){
+            if (this.facing == 'left') {
                 this.roman.frame = 22;
             }
-            else{
+            else {
                 this.roman.frame = 6;
             }
 
