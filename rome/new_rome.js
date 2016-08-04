@@ -121,10 +121,10 @@ class PlayState {
     //this.resetDodgeme();
 
     // movement keys
-    this.cursors = game.input.keyboard.createCursorKeys();
+    //this.cursors = game.input.keyboard.createCursorKeys();
     //this.atkkr = game.input.keyboard.addKey(Phaser.Keyboard.E);
-    this.right = game.input.keyboard.addKey(Phaser.KeyCode.D);
-    this.left = game.input.keyboard.addKey(Phaser.Keyboard.A);
+    this.right = game.input.keyboard.addKey(Phaser.KeyCode.KEY.D);
+    this.left = game.input.keyboard.addKey(Phaser.KeyCode.KEY.A);
   }
 
   update() {
@@ -144,7 +144,7 @@ class PlayState {
             this.facing = 'left';
         }
     }
-    else if (this.cursors.D.isDown) {
+    else if (this.cursors.right.isDown) {
         this.roman.body.velocity.x = 300;
         if (this.facing != 'right'){
             this.roman.animations.play('right');
