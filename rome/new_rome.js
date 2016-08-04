@@ -151,7 +151,7 @@ class PlayState {
     //else {
     //  this.roman.animations.play('idle')
     //}
-    if (this.left.isDown) {
+    else if (this.left.isDown) {
         this.roman.body.velocity.x = -300;
         if (this.facing != 'left') {
             this.roman.animations.play('left');
