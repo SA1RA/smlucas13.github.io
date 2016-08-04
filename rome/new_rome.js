@@ -130,19 +130,26 @@ class PlayState {
 
   update() {
     this.roman.body.velocity.x = 0;
-    if (this.atkkr.isDown) {
-      this.roman.animations.play('attackr');
-    }
-    else {
-      this.roman.animations.play('idle')
-    }
     if (this.atkkl.isDown) {
-      this.roman.animations.play('attackl');
+        this.roman.ainations.play('attakl');
+        if (this.facing != 'left') {
+            this.roman.animations.play('left');
+            this.facing = 'left';
+        }
     }
-    else {
-      this.roman.animations.play('idle')
+    else if (this.right.isDown) {
+        this.roman.aniations.play('attackr');
+        if (this.facing != 'right'){
+            this.roman.animations.play('right');
+            this.facing = 'right';
+        }
     }
+    --------------------
+    //if (this.atkkl.isDown) {
+    //  this.roman.animations.play('attackl');
     //}
+    //else {
+    //  this.roman.animations.play('idle')
     //}
     if (this.left.isDown) {
         this.roman.body.velocity.x = -300;
