@@ -133,8 +133,14 @@ class PlayState {
     if (this.atkkr.isDown) {
       this.roman.animations.play('attackr');
     }
+    else {
+      this.roman.animations.play('idle')
+    }
     if (this.atkkl.isDown) {
       this.roman.animations.play('attackl');
+    }
+    else {
+      this.roman.animations.play('idle')
     }
     //}
     //}
