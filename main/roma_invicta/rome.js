@@ -135,19 +135,19 @@ class PlayState {
     if (this.atkkl.isDown) {
         if (this.facing != 'left') {
             this.roman.animations.play('atkl');
-            this.AttackTimer = game.time.now + 750;
+            //this.AttackTimer = game.time.now + 750;
             this.facing = 'left';
         }
     }
-    else if (this.atkkr.isDown && this.game.time.now > AttackTimer) {
+    else if (this.atkkr.isDown) {
         if (this.facing != 'right'){
             this.roman.animations.play('atkr');
-            this.AttackTimer = game.time.now + 750;
+            //this.AttackTimer = game.time.now + 750;
             this.facing = 'right';
         }
     }
     
-    else if (this.left.isDown && this.game.time.now > AttackTimer) {
+    else if (this.left.isDown) {
         this.roman.body.velocity.x = -300;
         if (this.facing != 'left') {
             this.roman.animations.play('left');
