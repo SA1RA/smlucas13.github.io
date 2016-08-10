@@ -124,7 +124,6 @@ class PlayState {
     this.roman.body.bounce.setTo(C.roman.bounce);
     this.roman.body.drag.setTo(C.roman.drag);
     //skeleton physics
-    this.skeleton.body.velocity.x = 300;
     game.physics.arcade.enable(this.skeleton);
     this.skeleton.body.collideWorldBounds = true;
     this.skeleton.body.bounce.setTo(C.skeleton.bounce);
@@ -154,6 +153,7 @@ class PlayState {
   }
 
   update() {
+    this.skeleton.body.velocity.x = 300;
     this.roman.body.velocity.x = 0;
     //if (this.skeleton.body.velocity.x = 0) {
     //    this.skeleton.body.velocity.x = -200;
