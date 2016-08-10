@@ -1,6 +1,6 @@
 //Game Roma_invicta
 "use strict";
-var AttakTimer = 0;
+//var AttakTimer = 0;
 var C = {
   background: {
     image: 'background_rome5.gif',
