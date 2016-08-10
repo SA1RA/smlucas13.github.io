@@ -155,14 +155,14 @@ class PlayState {
   update() {
     this.roman.body.velocity.x = 0;
     
-    if (this.atkkl.isDown) {
+    if (this.atkkr.isDown) {
         if (this.facing != 'left') {
             this.roman.animations.play('atkl');
             //this.AttackTimer = game.time.now + 750;
             this.facing = 'left';
         }
     }
-    else if (this.atkkr.isDown) {
+    else if (this.atkkl.isDown) {
         if (this.facing != 'right'){
             this.roman.animations.play('atkr');
             //this.AttackTimer = game.time.now + 750;
