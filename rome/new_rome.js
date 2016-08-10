@@ -119,6 +119,7 @@ class PlayState {
     this.skeleton.animations.play('idle',C.skeleton.frames,true);
     
     //roman physics
+    game.physics.arcade.collide(roman, skeleton);
     game.physics.arcade.enable(this.roman);
     this.roman.body.collideWorldBounds = true;
     this.roman.body.bounce.setTo(C.roman.bounce);
