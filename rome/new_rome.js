@@ -107,7 +107,7 @@ class PlayState {
     this.roman.animations.add('atkl', [30], 1, true);
     //skeleton
     this.skeleton = this.add.sprite(C.skeleton.startx,C.skeleton.starty,'skeleton');
-    this.skeleton.animations.play('idle');
+    this.skeleton.animations.play('idle',C.skeleton.frames,true);
     this.skeleton.smoothed = false; 
     this.skeleton.scale.set(3);
     this.skeleton.anchor.set(0.5,0.5);
