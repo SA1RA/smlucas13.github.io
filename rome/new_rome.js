@@ -112,7 +112,7 @@ class PlayState {
     this.skeleton.scale.set(3);
     this.skeleton.anchor.set(0.5,0.5);
     //skeleton animations
-    this.skeleton.animations.add('idle', [15], 1, true);
+    this.skeleton.animations.add('idle', [15], 15, true);
     this.skeleton.animations.add('left', [5, 6, 7], 6, true);
     this.skeleton.animations.add('right', [1, 2, 3], 6, true);
     this.skeleton.animations.add('atkr', [11], 1, true);
