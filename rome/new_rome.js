@@ -105,6 +105,11 @@ class PlayState {
     this.roman.animations.add('right', [2, 3, 4, 5, 6, 7, 8,  9, 10], 11, true);
     this.roman.animations.add('atkr', [29], 1, true);
     this.roman.animations.add('atkl', [30], 1, true);
+    //skeleton
+    this.skeleton = this.add.sprite(C.skeleton.startx,C.skeleton.starty,'skeleton');
+    this.skeleton.smoothed = false; 
+    this.skeleton.scale.set(3);
+    this.skeleton.anchor.set(0.5,0.5);
     //skeleton animations
     this.skeleton.animations.add('idle', [15], 1, true);
     this.skeleton.animations.add('left', [5, 6, 7], 6, true);
@@ -118,10 +123,10 @@ class PlayState {
     this.roman.body.drag.setTo(C.roman.drag);
 
     // skeleton
-    this.skeleton = this.add.sprite(160,-32,'skeleton');
-    this.skeleton.smoothed = false; 
-    this.skeleton.scale.set(1);
-    this.skeleton.anchor.set(0.5,0.5);
+    //this.skeleton = this.add.sprite(160,-32,'skeleton');
+    //this.skeleton.smoothed = false; 
+    //this.skeleton.scale.set(1);
+    //this.skeleton.anchor.set(0.5,0.5);
     //this.dodgeme.animations.play('blink',C.dodgeme.frames,true);
     //game.physics.arcade.enable(this.dodgeme);
     //if (C.dodgeme.gravity > 0) {
