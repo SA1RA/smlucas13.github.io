@@ -22,7 +22,7 @@ var C = {
     height: 29,
     frames: 16,
     startx: 450,
-    starty: 650,
+    starty: 730,
     bounce: 0.3,
     drag: 3000,
     speed: 200
