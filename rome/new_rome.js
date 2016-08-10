@@ -117,12 +117,11 @@ class PlayState {
     this.roman.body.bounce.setTo(C.roman.bounce);
     this.roman.body.drag.setTo(C.roman.drag);
 
-    // dodgeme
-    //this.dodgeme = this.add.sprite(160,-32,'dodgeme');
-    //this.dodgeme.smoothed = false; 
-    //this.dodgeme.scale.set(1);
-    //this.dodgeme.anchor.set(0.5,0.5);
-    //this.dodgeme.animations.add('blink');
+    // skeleton
+    this.skeleton = this.add.sprite(160,-32,'skeleton');
+    this.skeleton.smoothed = false; 
+    this.skeleton.scale.set(1);
+    this.skeleton.anchor.set(0.5,0.5);
     //this.dodgeme.animations.play('blink',C.dodgeme.frames,true);
     //game.physics.arcade.enable(this.dodgeme);
     //if (C.dodgeme.gravity > 0) {
