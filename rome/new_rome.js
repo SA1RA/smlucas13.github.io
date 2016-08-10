@@ -107,7 +107,6 @@ class PlayState {
     this.roman.animations.add('atkl', [30], 1, true);
     //skeleton
     this.skeleton = this.add.sprite(C.skeleton.startx,C.skeleton.starty,'skeleton');
-    this.skeleton.animations.play('idle',C.skeleton.frames,true);
     this.skeleton.smoothed = false; 
     this.skeleton.scale.set(3);
     this.skeleton.anchor.set(0.5,0.5);
@@ -117,6 +116,7 @@ class PlayState {
     this.skeleton.animations.add('right', [1, 2, 3], 6, true);
     this.skeleton.animations.add('atkr', [11], 1, true);
     this.skeleton.animations.add('atkl', [13], 1, true);
+    this.skeleton.animations.play('idle',C.skeleton.frames,true);
     
     //roman physics
     game.physics.arcade.enable(this.roman);
