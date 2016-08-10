@@ -155,7 +155,6 @@ class PlayState {
 
   update() {
     this.roman.body.velocity.x = 0;
-    this.skeleton.body.velocity.x = 0;
     if (this.skeleton.body.velocity.x = 0) {
         this.skeleton.body.velocity.x = -200;
         if (this.facing != 'left') {
