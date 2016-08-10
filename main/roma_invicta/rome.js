@@ -3,7 +3,7 @@
 //var AttakTimer = 0;
 var C = {
   background: {
-    image: 'background_rome5.gif',
+    image: 'background_rome5.png',
     scale: 1
   },
   roman: {
