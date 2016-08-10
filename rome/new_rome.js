@@ -16,14 +16,19 @@ var C = {
     drag: 3000,
     speed: 400
   },
-  //dodgeme: {
-  //  image: 'assets/dodgeme.png',
-  //  width: 64,
-  //  height: 64,
-  //  frames: 1,
-  //  gravity: 5000, // set to 0 to just use velocity
-  //  velocity: 1100 // ignored if gravity > 0
-  //}
+  skeleton: {
+    image: 'skeleton.png',
+    width: 29,
+    height: 29,
+    frames: 16,
+    startx: 450,
+    starty: 750,
+    bounce: 0.3,
+    drag: 3000,
+    speed: 200
+    //gravity: 5000, // set to 0 to just use velocity
+    //velocity: 1100 // ignored if gravity > 0
+  }
 };
 
 
@@ -65,12 +70,12 @@ class StartState {
       C.roman.height,
       C.roman.frames
     );
-    //this.load.spritesheet('dodgeme',
-    //  C.dodgeme.image,
-    //  C.dodgeme.width,
-    //  C.dodgeme.height,
-    //  C.dodgeme.frames
-    //);
+    this.load.spritesheet('skeleton',
+      C.skeleton.image,
+      C.skeleton.width,
+      C.skeleton.height,
+      C.skeleton.frames
+    );
   }
 
   create() {
@@ -94,11 +99,18 @@ class PlayState {
     this.roman.smoothed = false; 
     this.roman.scale.set(3);
     this.roman.anchor.set(0.5,0.5);
+    //roman animations
     this.roman.animations.add('left', [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], 11, true);
     this.roman.animations.add('idle', [27], 1, true);
     this.roman.animations.add('right', [2, 3, 4, 5, 6, 7, 8,  9, 10], 11, true);
     this.roman.animations.add('atkr', [29], 1, true);
     this.roman.animations.add('atkl', [30], 1, true);
+    //skeleton animations
+    this.skeleton.animations.add('idle', [15], 1, true);
+    this.skeleton.animations.add('left', [5, 6, 7], 6, true);
+    this.skeleton.animations.add('right', [1, 2, 3], 6, true);
+    this.skeleton.animations.add('atkr', [11], 1, true);
+    this.skeleton.animations.add('atkl', [13], 1, true);
     
     game.physics.arcade.enable(this.roman);
     this.roman.body.collideWorldBounds = true;
