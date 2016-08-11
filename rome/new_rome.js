@@ -155,6 +155,7 @@ class PlayState {
   update() {
     game.physics.arcade.collide(this.roman, this.skeleton);
     this.skeleton.body.velocity.x = -200;
+    this.skeleton.animations.play('left')
     this.roman.body.velocity.x = 0;
     if (this.atkkl.isDown) {
         if (this.facing != 'left') {
