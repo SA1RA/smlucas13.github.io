@@ -10,7 +10,7 @@ var C = {
     width: 36,
     height: 36,
     frames: 31,
-    startx: 400,
+    startx: 300,
     starty: 750,
     bounce: 0.3,
     drag: 3000,
@@ -154,7 +154,7 @@ class PlayState {
 
   update() {
     game.physics.arcade.collide(this.roman, this.skeleton);
-    this.skeleton.body.velocity.x = 0;
+    this.skeleton.body.velocity.x = 200;
     this.roman.body.velocity.x = 0;
     if (this.skeleton.body.velocity.x = 0) {
         this.skeleton.body.velocity.x = -200;
