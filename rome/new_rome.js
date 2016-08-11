@@ -154,12 +154,12 @@ class PlayState {
 
   update() {
     game.physics.arcade.collide(this.roman, this.skeleton);
-    if (this.game.physics.arcade.collide(this.roman, this.skeleton)) {
+    this.game.physics.arcade.collide(this.roman, this.skeleton)) {
+    this.skeleton.body.velocity.x = -70;
+    this.skeleton.animations.play('left')
+    handleCollisiont(roman,skeleton) {
+      this.skeleton.body.velocity.x = 0;
       this.skeleton.animations.play('attackl')
-    }
-    else {
-      this.skeleton.body.velocity.x = -70;
-      this.skeleton.animations.play('left')
     }
     
     
