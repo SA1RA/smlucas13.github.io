@@ -196,11 +196,11 @@ class PlayState {
             this.facing = 'idle';
         }
     }
-    game.physics.arcade.collide(this.roman, this.skeleton, this.handleCollisiont);
+    game.physics.arcade.collide(this.roman, this.skeleton, this.handleCollision);
     //game.physics.arcade.collide(this.roman, this.skeleton);
     //this.skeleton.body.velocity.x = -70;
     //this.skeleton.animations.play('left')
-    handleCollisiont(roman,skeleton) {
+    handleCollision(roman,skeleton) {
       this.skeleton.body.velocity.x = 0;
       this.skeleton.animations.play('attackl')
     }
@@ -218,9 +218,9 @@ class PlayState {
   //    this.dodgeme.x = game.rnd.integerInRange(0,320);
   //}
 
-  handleCollision() {
-    game.state.start('End')
-  }
+  //handleCollision() {
+  //  game.state.start('End')
+  //}
 
 }
 
