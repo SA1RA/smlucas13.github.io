@@ -21,7 +21,7 @@ var C = {
     width: 29,
     height: 29,
     frames: 16,
-    startx: 450,
+    startx: 400,
     starty: 730,
     bounce: 0.3,
     drag: 3000,
