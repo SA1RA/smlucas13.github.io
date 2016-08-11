@@ -200,10 +200,10 @@ class PlayState {
     game.physics.arcade.collide(this.roman, this.skeleton);
     this.skeleton.body.velocity.x = -70;
     this.skeleton.animations.play('left')
-    handleCollision1(roman,skeleton) {
-      this.skeleton.body.velocity.x = 0;
-      this.skeleton.animations.play('attackl')
-    }
+    //handleCollision1(roman,skeleton) {
+    //  this.skeleton.body.velocity.x = 0;
+    //  this.skeleton.animations.play('attackl')
+    //}
     //game.physics.arcade.collide(this.roman, this.skeleton, this.handleCollision1);
     //if (this.dodgeme.y >= 568) {
     //  this.resetDodgeme();
