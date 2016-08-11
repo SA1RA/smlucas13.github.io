@@ -153,10 +153,11 @@ class PlayState {
   }
 
   update() {
-    game.physics.arcade.collide(this.roman, this.skeleton);
+    game.physics.arcade.collide(this.roman, this.skeleton, this.handleCollisiont);
+    //game.physics.arcade.collide(this.roman, this.skeleton);
     this.skeleton.body.velocity.x = -70;
     this.skeleton.animations.play('left')
-    handleCollision(roman,skeleton) {
+    handleCollisiont(roman,skeleton) {
       this.skeleton.body.velocity.x = 0;
       this.skeleton.animations.play('attackl')
     }
