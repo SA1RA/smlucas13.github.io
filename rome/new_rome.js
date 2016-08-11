@@ -156,20 +156,6 @@ class PlayState {
     game.physics.arcade.collide(this.roman, this.skeleton);
     this.skeleton.body.velocity.x = 0;
     this.roman.body.velocity.x = 0;
-    //if (this.skeleton.body.velocity.x = 0) {
-    //    this.skeleton.body.velocity.x = -200;
-    //    if (this.facing != 'left') {
-    //        this.skeleton.animations.play('left');
-    //        this.facing = 'left';
-    //    }
-    //}
-    //else if (this.skeleton.body.velocity.x = 0) {
-    //    this.skeleton.body.velocity.x = 200;
-    //    if (this.facing != 'right'){
-    //        this.skeleton.animations.play('right');
-    //        this.facing = 'right';
-    //    }
-    }
     if (this.atkkl.isDown) {
         if (this.facing != 'left') {
             this.roman.animations.play('atkl');
