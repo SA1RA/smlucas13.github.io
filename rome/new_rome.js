@@ -197,14 +197,14 @@ class PlayState {
         }
     }
     
-    //game.physics.arcade.collide(this.roman, this.skeleton);
-    //this.skeleton.body.velocity.x = -70;
-    //this.skeleton.animations.play('left')
+    game.physics.arcade.collide(this.roman, this.skeleton);
+    this.skeleton.body.velocity.x = -70;
+    this.skeleton.animations.play('left')
     handleCollision1(roman,skeleton) {
       this.skeleton.body.velocity.x = 0;
       this.skeleton.animations.play('attackl')
     }
-    game.physics.arcade.collide(this.roman, this.skeleton, this.handleCollision1);
+    //game.physics.arcade.collide(this.roman, this.skeleton, this.handleCollision1);
     //if (this.dodgeme.y >= 568) {
     //  this.resetDodgeme();
     //}
@@ -219,9 +219,9 @@ class PlayState {
   //    this.dodgeme.x = game.rnd.integerInRange(0,320);
   //}
 
-  //handleCollision() {
-  //  game.state.start('End')
-  //}
+  handleCollision() {
+    game.state.start('End')
+  }
 
 }
 
