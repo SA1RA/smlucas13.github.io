@@ -153,9 +153,15 @@ class PlayState {
   }
 
   update() {
+    if (this.game.physics.arcade.collide(this.roman, this.skeleton)) {
+      this.skeleton.animations.play('attackl')
+    }
+    else {
+      this.skeleton.body.velocity.x = -70;
+      this.skeleton.animations.play('left')
+    }
+    
     game.physics.arcade.collide(this.roman, this.skeleton);
-    this.skeleton.body.velocity.x = -70;
-    this.skeleton.animations.play('left')
     this.roman.body.velocity.x = 0;
     if (this.atkkl.isDown) {
         if (this.facing != 'left') {
