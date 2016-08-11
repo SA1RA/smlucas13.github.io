@@ -153,16 +153,6 @@ class PlayState {
   }
 
   update() {
-    game.physics.arcade.collide(this.roman, this.skeleton, this.handleCollision);
-    //game.physics.arcade.collide(this.roman, this.skeleton);
-    this.skeleton.body.velocity.x = -70;
-    this.skeleton.animations.play('left')
-    handleCollision(roman,skeleton) {
-      this.skeleton.body.velocity.x = 0;
-      this.skeleton.animations.play('attackl')
-    }
-    
-    
     this.roman.body.velocity.x = 0;
     if (this.atkkl.isDown) {
         if (this.facing != 'left') {
@@ -206,6 +196,14 @@ class PlayState {
             this.facing = 'idle';
         }
     }
+    game.physics.arcade.collide(this.roman, this.skeleton, this.handleCollisiont);
+    //game.physics.arcade.collide(this.roman, this.skeleton);
+    //this.skeleton.body.velocity.x = -70;
+    //this.skeleton.animations.play('left')
+    handleCollisiont(roman,skeleton) {
+      this.skeleton.body.velocity.x = 0;
+      this.skeleton.animations.play('attackl')
+    }
     //if (this.dodgeme.y >= 568) {
     //  this.resetDodgeme();
     //}
@@ -219,13 +217,6 @@ class PlayState {
   //    }
   //    this.dodgeme.x = game.rnd.integerInRange(0,320);
   //}
-  //--------------------
-    //if (this.atkkl.isDown) {
-    //  this.roman.animations.play('attackl');
-    //}
-    //else {
-    //  this.roman.animations.play('idle')
-    //}
 
   handleCollision() {
     game.state.start('End')
