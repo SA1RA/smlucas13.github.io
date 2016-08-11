@@ -154,7 +154,7 @@ class PlayState {
 
   update() {
     game.physics.arcade.collide(this.roman, this.skeleton);
-    this.skeleton.body.velocity.x = 200;
+    this.skeleton.body.velocity.x = 0;
     this.roman.body.velocity.x = 0;
     //if (this.skeleton.body.velocity.x = 0) {
     //    this.skeleton.body.velocity.x = -200;
