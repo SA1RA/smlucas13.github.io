@@ -181,7 +181,7 @@ class PlayState {
    //     }
    // }
     
-    game.physics.arcade.collide(this.roman, this.skeleton);
+    
     this.skeleton.body.velocity.x = -70;
     this.skeleton.animations.play('left')
     handleCollision1(roman,skeleton) {
