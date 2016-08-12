@@ -1,5 +1,4 @@
 "use strict";
-//var AttakTimer = 0;
 var C = {
   background: {
     image: 'background_rome5.gif',
@@ -129,21 +128,6 @@ class PlayState {
     this.skeleton.body.bounce.setTo(C.skeleton.bounce);
     this.skeleton.body.drag.setTo(C.skeleton.drag);
 
-
-    // skeleton
-    //this.skeleton = this.add.sprite(160,-32,'skeleton');
-    //this.skeleton.smoothed = false; 
-    //this.skeleton.scale.set(1);
-    //this.skeleton.anchor.set(0.5,0.5);
-    //this.dodgeme.animations.play('blink',C.dodgeme.frames,true);
-    //game.physics.arcade.enable(this.dodgeme);
-    //if (C.dodgeme.gravity > 0) {
-    //  this.dodgeme.body.gravity.y = C.dodgeme.gravity;
-    //} else {
-    //  this.dodgeme.body.velocity.y = C.dodgeme.velocity;
-    //}
-    //this.resetDodgeme();
-
     // movement keys
     //this.cursors = game.input.keyboard.createCursorKeys();
     this.atkkr = game.input.keyboard.addKey(Phaser.KeyCode.E);
@@ -154,57 +138,57 @@ class PlayState {
 
   update() {
     this.roman.body.velocity.x = 0;
-    if (this.atkkl.isDown) {
-        if (this.facing != 'left') {
-            this.roman.animations.play('atkl');
-            //this.AttackTimer = game.time.now + 750;
-            this.facing = 'left';
-        }
-    }
-    else if (this.atkkr.isDown) {
-        if (this.facing != 'right'){
-            this.roman.animations.play('atkr');
-            //this.AttackTimer = game.time.now + 750;
-            this.facing = 'right';
-        }
-    }
+    //if (this.atkkl.isDown) {
+    //    if (this.facing != 'left') {
+   //         this.roman.animations.play('atkl');
+    //        //this.AttackTimer = game.time.now + 750;
+    //        this.facing = 'left';
+    //    }
+    //}
+    //else if (this.atkkr.isDown) {
+    //    if (this.facing != 'right'){
+    //        this.roman.animations.play('atkr');
+    //        //this.AttackTimer = game.time.now + 750;
+    //        this.facing = 'right';
+    //    }
+    //}
     
-    else if (this.left.isDown) {
-        this.roman.body.velocity.x = -300;
-        if (this.facing != 'left') {
-            this.roman.animations.play('left');
-            this.facing = 'left';
-        }
-    }
-    else if (this.right.isDown) {
-        this.roman.body.velocity.x = 300;
-        if (this.facing != 'right'){
-            this.roman.animations.play('right');
-            this.facing = 'right';
-        }
-    }
-    else {
-        if (this.facing != 'idle') {
-            this.roman.animations.stop();
-            if (this.facing == 'left') {
-                this.roman.frame = 22;
-            }
-            else {
-                this.roman.frame = 6;
-            }
+    //else if (this.left.isDown) {
+    //    this.roman.body.velocity.x = -300;
+    //    if (this.facing != 'left') {
+    //        this.roman.animations.play('left');
+    //        this.facing = 'left';
+    //    }
+    //}
+    //else if (this.right.isDown) {
+    //    this.roman.body.velocity.x = 300;
+    //    if (this.facing != 'right'){
+    //        this.roman.animations.play('right');
+    //        this.facing = 'right';
+    //    }
+    //}
+    //else {
+   //     if (this.facing != 'idle') {
+   //         this.roman.animations.stop();
+    //        if (this.facing == 'left') {
+    //            this.roman.frame = 22;
+    //        }
+    //        else {
+     //           this.roman.frame = 6;
+    //        }
 
-            this.facing = 'idle';
-        }
-    }
+    //        this.facing = 'idle';
+   //     }
+   // }
     
     game.physics.arcade.collide(this.roman, this.skeleton);
     this.skeleton.body.velocity.x = -70;
     this.skeleton.animations.play('left')
-    //handleCollision1(roman,skeleton) {
-    //  this.skeleton.body.velocity.x = 0;
-    //  this.skeleton.animations.play('attackl')
-    //}
-    //game.physics.arcade.collide(this.roman, this.skeleton, this.handleCollision1);
+    handleCollision1(roman,skeleton) {
+      this.skeleton.body.velocity.x = 0;
+      this.skeleton.animations.play('attackl')
+    }
+    game.physics.arcade.collide(this.roman, this.skeleton, this.handleCollision1);
     //if (this.dodgeme.y >= 568) {
     //  this.resetDodgeme();
     //}
