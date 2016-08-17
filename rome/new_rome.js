@@ -94,7 +94,7 @@ class PlayState {
     this.sword = this.add.sprite(C.roman.startx,C.roman.starty,'sword')
     
     //sword
-    weapon = game.add.weapon('sword');
+    //weapon = game.add.weapon('sword');
 
     // background
     this.background = this.add.tileSprite(0,0,800,800,'background');
