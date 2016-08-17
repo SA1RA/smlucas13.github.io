@@ -4,6 +4,10 @@ var C = {
     image: 'background_rome5.gif',
     scale: 1
   },
+  tree: {
+    image: 'tree.png',
+    scale: 1
+  },
   roman: {
     image: 'roman.png',
     width: 36,
@@ -96,6 +100,11 @@ class PlayState {
     this.background = this.add.tileSprite(0,0,800,800,'background');
     //this.background.autoScroll(0,C.background.scroll);
     this.background.scale.set(C.background.scale);
+    
+    //tree
+    this.tree = this.add.Sprite(100,100,'tree');
+    //this.background.autoScroll(0,C.background.scroll);
+    //this.tree.scale.set(C.tree.scale);
 
     // roman
     this.roman = this.add.sprite(C.roman.startx,C.roman.starty,'roman');
