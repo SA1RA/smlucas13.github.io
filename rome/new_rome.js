@@ -6,9 +6,9 @@ var C = {
   },
   tree: {
     image: 'tree.png',
-    scale: 8
+    scale: 8,
     startx: 100,
-    starty: 750,
+    starty: 750
   },
   roman: {
     image: 'roman.png',
