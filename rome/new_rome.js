@@ -8,7 +8,7 @@ var C = {
     image: 'tree.png',
     scale: 8,
     startx: 100,
-    starty: 550
+    starty: 560
   },
   roman: {
     image: 'roman.png',
