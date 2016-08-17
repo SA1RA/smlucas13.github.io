@@ -87,6 +87,10 @@ class PlayState {
 
   create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
+    this.sword = this.add.sprite(C.roman.startx,C.roman.starty,'sword')
+    
+    //sword
+    weapon = game.add.weapon(00, 'sword');
 
     // background
     this.background = this.add.tileSprite(0,0,800,800,'background');
