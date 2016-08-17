@@ -7,6 +7,8 @@ var C = {
   tree: {
     image: 'tree.png',
     scale: 8
+    startx: 100,
+    starty: 750,
   },
   roman: {
     image: 'roman.png',
@@ -103,7 +105,7 @@ class PlayState {
     this.background.scale.set(C.background.scale);
     
     //tree
-    this.tree = this.add.sprite(75,300,'tree');
+    this.tree = this.add.sprite(C.tree.startx,C.tree.starty,'tree');
     this.tree.smoothed = false;
     //this.background.autoScroll(0,C.background.scroll);
     this.tree.scale.set(C.tree.scale);
