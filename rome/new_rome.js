@@ -105,7 +105,7 @@ class PlayState {
     //tree
     this.tree = this.add.sprite(750,750,'tree');
     //this.background.autoScroll(0,C.background.scroll);
-    //this.tree.scale.set(C.tree.scale);
+    this.tree.scale.set(C.tree.scale);
 
     // roman
     this.roman = this.add.sprite(C.roman.startx,C.roman.starty,'roman');
