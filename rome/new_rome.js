@@ -103,7 +103,7 @@ class PlayState {
     this.background.scale.set(C.background.scale);
     
     //tree
-    this.tree = this.add.sprite(75,750,'tree');
+    this.tree = this.add.sprite(75,300,'tree');
     //this.background.autoScroll(0,C.background.scroll);
     this.tree.scale.set(C.tree.scale);
 
