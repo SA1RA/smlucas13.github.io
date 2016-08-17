@@ -67,6 +67,7 @@ class StartState {
 
   preload() {
     this.load.image('background',C.background.image);
+    this.load.image('tree');
     this.load.spritesheet('roman',
       C.roman.image,
       C.roman.width,
