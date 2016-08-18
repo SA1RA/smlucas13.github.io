@@ -157,7 +157,7 @@ class PlayState {
   update() {
     this.roman.body.velocity.x = 0;
     if (this.jump.isDown) {
-      this.roman.body.velocity.y = 500;
+      this.roman.body.velocity.y = -100;
     }
     if (this.atkkl.isDown) {
         if (this.facing != 'left') {
