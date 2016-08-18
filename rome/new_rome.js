@@ -151,7 +151,7 @@ class PlayState {
     this.atkkl = game.input.keyboard.addKey(Phaser.KeyCode.Q);
     this.right = game.input.keyboard.addKey(Phaser.KeyCode.D);
     this.left = game.input.keyboard.addKey(Phaser.KeyCode.A);
-    this.jump = game.input.keyboard.addKey(Phaser.KeyCode.SPACE)
+    this.jump = game.input.keyboard.addKey(Phaser.KeyCode.W)
   }
 
   update() {
