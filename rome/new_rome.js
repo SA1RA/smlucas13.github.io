@@ -112,7 +112,6 @@ class PlayState {
 
     // roman
     this.roman = this.add.sprite(C.roman.startx,C.roman.starty,'roman');
-    this.roman.body.gravity.y = 200;
     this.roman.smoothed = false; 
     this.roman.scale.set(3);
     this.roman.anchor.set(0.5,0.5);
@@ -156,6 +155,7 @@ class PlayState {
   }
 
   update() {
+    this.roman.body.velocity.y = 500;
     this.roman.body.velocity.x = 0;
     if (this.jump.isDown) {
       this.roman.body.velocity.y = -500;
