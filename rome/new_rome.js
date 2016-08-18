@@ -151,10 +151,14 @@ class PlayState {
     this.atkkl = game.input.keyboard.addKey(Phaser.KeyCode.Q);
     this.right = game.input.keyboard.addKey(Phaser.KeyCode.D);
     this.left = game.input.keyboard.addKey(Phaser.KeyCode.A);
+    this.jump = game.input.keyboard.addKey(Phaser.KeyCode.SPACE)
   }
 
   update() {
     this.roman.body.velocity.x = 0;
+    if (this.jump.isDown) {
+      this.roman.body.velocity.y = 100
+    }
     if (this.atkkl.isDown) {
         if (this.facing != 'left') {
             this.roman.animations.play('atkl');
